@@ -43,6 +43,11 @@
     box-sizing: border-box;
 }
 
+.container{
+    width:1200px;
+    margin:0 auto;
+}
+
 img{
     width: 100%;
     margin:0;
@@ -84,7 +89,7 @@ section#hero-banner{
     width:100%;
 }
 
-.container{
+#hero-banner .container{
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
@@ -138,21 +143,22 @@ section#hero-banner{
 #about{
     background-color:#D8D8D8;
     padding:40px;
+ 
 }
 
 
-#about .container img{
+#about img{
     width:400px;
 }
 
-#about .container .desc{
+#about .desc{
     text-align: left;
-    width:700px;
-    margin-right:200px;
+    width:50%;
+    margin-right:50px;
     z-index:99;
 }
 
-#about .container .desc p{
+#about .desc p{
     margin-top:20px;
     font-size:18px;
 }
@@ -160,6 +166,7 @@ section#hero-banner{
 .about-img{
     z-index: 199;
     position:relative;
+    width:50%;
 }
 
 .about-img::after{
@@ -174,20 +181,45 @@ section#hero-banner{
     animation: myAnim 10s ease 0s infinite normal forwards;
 }
 
+
+
 .work-cards{
-    margin:150px;
+ margin-top:100px;
+ margin-bottom:50px;
     display:flex;
-    gap:calc(20%/3);
+    gap:calc(10%/3);
 }
 
+.work-cards div{
+    background-color:#D1D1CE;
+    padding:20px 40px;
+    transition: all 500ms ease;
+    width:23%;
+}
+
+.work-cards div:hover{
+    background-color:#C9C9C2;
+}
+
+
+
 .work-cards div i{
-font-size:36px;   
+font-size:30px;
+color:#6E7F80;   
 }
 
 .work-cards div h3{
     margin-top:10px;
+    font-size:14px;
 }
 
+.work-cards div p{
+    margin-top:5px;
+    font-size:14px;
+}
+
+
+/* animation for img in secound section */
 
 @keyframes myAnim {
 	0% {
@@ -233,4 +265,24 @@ font-size:36px;
 	100% {
 		transform: translate(0);
 	}
+}
+
+#my_portfolio{
+    background-color:#EDEDED;
+    padding:40px;
+}
+
+#my_portfolio .container h2{
+    margin:0 auto;
+    font-size:20px;
+}
+
+.portfolio_menu{
+    display: flex;
+    gap:30px;
+    list-style: none;
+}
+
+ul.portfolio_menu li{
+    list-style: none;
 }
