@@ -273,16 +273,146 @@ color:#6E7F80;
 }
 
 #my_portfolio .container h2{
-    margin:0 auto;
+    text-align:center;
+    /* margin:0 auto; */
     font-size:20px;
 }
 
-.portfolio_menu{
+ul#portfolio_menu{
     display: flex;
     gap:30px;
     list-style: none;
+    margin:20px auto;
+    justify-items: center;
+    align-items: center;
 }
 
 ul.portfolio_menu li{
     list-style: none;
+    cursor: pointer;
+}
+
+.portfolio-cards-area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio-cards-area .card{
+    width:30%;
+    background-color:#FDF5E6;
+    margin-bottom:40px;
+    transition:all 500ms ease;
+}
+
+.portfolio-cards-area .card img{
+    width:100%;
+    display: block;
+}
+
+.portfolio-cards-area .card .desc{
+    background-color:rgba(0,98,98,0.3);
+    padding:20px;
+    position: relative;
+    z-index:99;
+    margin-top:0px;
+    display:none;
+    /* opacity:0; */
+    transition:all 500ms ease;
+    border-radius:20px 20px 0px 0px;
+}
+
+.portfolio-cards-area .card .desc i{
+    font-size:12px;
+    padding:3px;
+    border:3px solid #333;
+    border-radius:50%;
+    margin-top:15px;
+    line-height:250%;
+}
+
+.portfolio-cards-area .card .desc p{
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+
+.portfolio-cards-area .card:hover > .desc{
+    margin-top:-142px;
+    display: block;
+    /* opacity:1; */
+    transition:all 500ms ease;
+}
+
+#journal{
+    padding-top:40px;
+    padding-bottom:40px;
+}
+
+#journal h3{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:20px;
+}
+
+#journal #journal_cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+#journal #journal_cards .card{
+    width:32%;
+}
+
+#journal .journal_cards img{
+    width:50%;
+}
+
+.col-50{
+    width:50%;
+}
+
+
+.contact{
+    background-color:#EDEDED;
+    padding:40px 0px;
+}
+
+.contact .two_col{
+    display: flex;
+}
+
+.contact .container .col-50 label{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+
+.contact .container .col-50 label input{
+    width:100%;
+    padding:10px 15px;
+    margin-bottom:10px;
+    font-size:16px;
+    border:1px solid #D4D4D4;
+    border-radius:5px;
+}
+
+
+.contact .container h3{
+    /* display: block; */
+    text-align: left;
+    /* margin:40px auto; */
+    /* padding-top:40px; */
+    margin-bottom:20px;
+}
+
+.contact .container .col-50 label input[name="name"],
+.contact .container .col-50 label input[name="surname"]{
+    width:49%;
+}
+
+.contact .container .col-50 label input[type="submit"]{
+    background-color:#333333;
+    color:#ffffff;
 }
